@@ -16,12 +16,24 @@
         <title>DrewBot | Главная</title>
     </head>
     <body>
+        <script>
+            function Sound() {
+                var embed = document.createElement('EMBED');
+                embed.src = 'other/ee.mp3';
+                document.body.appendChild(embed);
+                document.getElementById('intro').style.backgroundImage='url("img/ee.png")'
+                document.getElementById('intro__title').textContent='Король И Шут'
+                document.getElementById('intro__slogan').textContent='Песня: Бал Лицемеров (Альбом: "Театр Демона" 2012 год)'
+                document.getElementById('intro__description').textContent='Одна из моих любимейших песен)'
+            }
+        </script>
+
         <header class="header">
             <div class="container">
                 <div class="header__inner">
                     <div class="header__logo">
                         <a href="index.html"><img src="img/varblack.png" alt=""></a>
-                        <h1 class="header__text">DrewBot</h1>
+                        <a class="header__text" onclick="Sound()">DrewBot</a>
                     </div>
                     <nav>
                         <a class="nav__link" href="terms.html">Условия Использования</a>
@@ -31,12 +43,12 @@
             </div>
         </header>
 
-        <div class="intro">
+        <div class="intro" id="intro">
             <div class="container">
                 <div class="intro__content">
-                    <h1 class="intro__title">DrewBot</h1>
-                    <h2 class="intro__slogan">Пушистый лис с возможностью модерации и всякого другого!</h2>
-                    <p class="intro__description">Многофункциональный Discord бот с возможностями модерации, защиты от краша, утилитами и многим другим. Сделано с любовью, рыжими лапками!</p>
+                    <h1 class="intro__title" id="intro__title">DrewBot</h1>
+                    <h2 class="intro__slogan" id="intro__slogan">Пушистый лис с возможностью модерации и всякого другого!</h2>
+                    <p class="intro__description" id="intro__description">Многофункциональный Discord бот с возможностями модерации, защиты от краша, утилитами и многим другим. Сделано с любовью, рыжими лапками!</p>
                     
                     <div class="intro__buttons">
                         <a class="double-border-button intro__button" href="https://discord.com/api/oauth2/authorize?client_id=999563144278061086&permissions=8&scope=bot%20applications.commands">Добавить Бота</a>
