@@ -12,15 +12,17 @@
         <link type="image/x-icon" href="img/black.png" rel="shortcut icon">
         <link type="Image/x-icon" href="img/black.png" rel="icon">
 
+        <audio src="other/ee.mp3" id="audio"></audio>
+
         <link rel="stylesheet" type="text/css" href="style.css">
         <title>DrewBot | Главная</title>
     </head>
     <body>
         <script>
             function Sound() {
-                var embed = document.createElement('EMBED');
-                embed.src = 'other/ee.mp3';
-                document.body.appendChild(embed);
+                var audio = document.getElementById('audio');
+                audio.play();
+
                 document.getElementById('intro').style.backgroundImage='url("img/ee.png")'
                 document.getElementById('intro__title').textContent='Король И Шут'
                 document.getElementById('intro__slogan').textContent='Песня: Бал Лицемеров (Альбом: "Театр Демона" 2012 год)'
